@@ -14,6 +14,22 @@ untuk detail dari citra bisa di lihat di [detail-starlet.jpg](https://github.com
     <li>matplotlib</li>
 </ul>
 
+<h3>Sumber yang di butuhkan dan digunakan</h3>
+installing library
+```
+pip install numpy
+pip install opencv-python
+pip install imutils 
+pip install matplotlib
+pip install Pillow
+```
+Mencari Library python : [PyPi](https://pypi.org) <br>
+Open Computer Vision : [Open-CV](https://docs.opencv.org/3.4/) <br>
+Bahan Belajar [Deteksi Kontur](https://learnopencv.com/contour-detection-using-opencv-python-c/#What-are-Contours) <br>
+Penjelasan Baris Program yang tak dapat dipahami [AI - penjelasan baris kode tertentu](https://chat.openai.com) <br>
+Bahan Belajar [Deteksi Plat](https://unydevelopernetwork.com/index.php/2021/05/03/membuat-deteksi-plat-nomer-kendaraan-sederhana-dengan-opencv-python/) <br>
+
+
 <h3>Penjelasan program</h3>
 
 1. importing library yang di butuhkan
@@ -96,18 +112,3 @@ untuk detail dari citra bisa di lihat di [detail-starlet.jpg](https://github.com
     cv2.imwrite('./plat-citra-tepi.png', cropped_edge)
     cv2.imwrite('./plat-citra-biner.png', binary)
     ```
-
-<h3>Sumber yang di butuhkan dan digunakan</h3>
-installing library
-```
-pip install numpy
-pip install opencv-python
-pip install imutils 
-pip install matplotlib
-pip install Pillow
-```
-Mencari Library python : [PyPi](https://pypi.org) <br>
-Open Computer Vision : [Open-CV](https://docs.opencv.org/3.4/) <br>
-Bahan Belajar [Deteksi Kontur](https://learnopencv.com/contour-detection-using-opencv-python-c/#What-are-Contours) <br>
-Penjelasan Baris Program yang tak dapat dipahami [AI - penjelasan baris kode tertentu](https://chat.openai.com) <br>
-Bahan Belajar [Deteksi Plat](https://unydevelopernetwork.com/index.php/2021/05/03/membuat-deteksi-plat-nomer-kendaraan-sederhana-dengan-opencv-python/) <br>

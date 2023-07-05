@@ -97,19 +97,17 @@ untuk detail dari citra bisa di lihat di [detail-starlet.jpg](https://github.com
     cv2.imwrite('./plat-citra-biner.png', binary)
     ```
 
-<h3>Penjelasan Alur</h3>
+<h3>Sumber yang di butuhkan dan digunakan</h3>
 installing library
-```python
+```
 pip install numpy
 pip install opencv-python
 pip install imutils 
 pip install matplotlib
 pip install Pillow
 ```
-
-<h3>Sumber - sumber</h3>
- [PyPi - Mencari library Python](https://pypi.org) <br>
- [Open - CV](https://docs.opencv.org/3.4/) <br>
- [Deteksi Kontur](https://learnopencv.com/contour-detection-using-opencv-python-c/#What-are-Contours) <br>
- [AI - penjelasan baris kode tertentu](https://chat.openai.com) <br>
- [Metode Belajar](https://unydevelopernetwork.com/index.php/2021/05/03/membuat-deteksi-plat-nomer-kendaraan-sederhana-dengan-opencv-python/) <br>
+Mencari Library python : [PyPi](https://pypi.org) <br>
+Open Computer Vision : [Open-CV](https://docs.opencv.org/3.4/) <br>
+Bahan Belajar [Deteksi Kontur](https://learnopencv.com/contour-detection-using-opencv-python-c/#What-are-Contours) <br>
+Penjelasan Baris Program yang tak dapat dipahami [AI - penjelasan baris kode tertentu](https://chat.openai.com) <br>
+Bahan Belajar [Deteksi Plat](https://unydevelopernetwork.com/index.php/2021/05/03/membuat-deteksi-plat-nomer-kendaraan-sederhana-dengan-opencv-python/) <br>

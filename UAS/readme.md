@@ -113,6 +113,3 @@ pip install Pillow
 [Deteksi Kontur](https://learnopencv.com/contour-detection-using-opencv-python-c/#What-are-Contours) <br>
 [AI - penjelasan baris kode tertentu](https://chat.openai.com) <br>
 [Metode Belajar](https://unydevelopernetwork.com/index.php/2021/05/03/membuat-deteksi-plat-nomer-kendaraan-sederhana-dengan-opencv-python/) <br>
-
-
-

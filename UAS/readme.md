@@ -14,7 +14,7 @@ untuk detail dari citra bisa di lihat di [detail-starlet.jpg](https://github.com
     <li>matplotlib</li>
 </ul>
 
-<h3>Penjelasan alur program</h3>
+<h3>Penjelasan program</h3>
 
 1. importing library yang di butuhkan
 2. Baca image ke dalam kode menggunakan ```cv2.imwrite``` dan simpan dalam sebuah variabel
@@ -97,6 +97,22 @@ untuk detail dari citra bisa di lihat di [detail-starlet.jpg](https://github.com
     cv2.imwrite('./plat-citra-biner.png', binary)
     ```
 
-    
+<h3>Penjelasan Alur</h3>
+installing library
+```python
+pip install numpy
+pip install opencv-python
+pip install imutils 
+pip install matplotlib
+pip install Pillow
+```
+
+<h3>Sumber - sumber</h3>
+[PyPi - Mencari library Python](https://pypi.org) <br>
+[Open - CV](https://docs.opencv.org/3.4/) <br>
+[Deteksi Kontur](https://learnopencv.com/contour-detection-using-opencv-python-c/#What-are-Contours) <br>
+[AI - penjelasan baris kode tertentu](https://chat.openai.com) <br>
+[Metode Belajar](https://unydevelopernetwork.com/index.php/2021/05/03/membuat-deteksi-plat-nomer-kendaraan-sederhana-dengan-opencv-python/) <br>
+
 
 

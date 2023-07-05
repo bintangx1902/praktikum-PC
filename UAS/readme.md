@@ -14,15 +14,7 @@ untuk detail dari citra bisa di lihat di [detail-starlet.jpg](https://github.com
     <li>matplotlib</li>
 </ul>
 
-<h3>Sumber yang di butuhkan dan digunakan</h3>
-installing library
-```
-pip install numpy
-pip install opencv-python
-pip install imutils 
-pip install matplotlib
-pip install Pillow
-```
+### Sumber yang di butuhkan dan digunakan 
 Mencari Library python : [PyPi](https://pypi.org) <br>
 Open Computer Vision : [Open-CV](https://docs.opencv.org/3.4/) <br>
 Bahan Belajar [Deteksi Kontur](https://learnopencv.com/contour-detection-using-opencv-python-c/#What-are-Contours) <br>

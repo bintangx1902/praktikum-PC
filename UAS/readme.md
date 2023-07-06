@@ -22,7 +22,47 @@ Penjelasan Baris Program yang tak dapat dipahami [AI - penjelasan baris kode ter
 Bahan Belajar [Deteksi Plat](https://unydevelopernetwork.com/index.php/2021/05/03/membuat-deteksi-plat-nomer-kendaraan-sederhana-dengan-opencv-python/) <br>
 
 
-<h3>Penjelasan program</h3>
+### TEORI PENDUKUNG
+- Image Channel Converting <br>
+pada ujian kali ini kita akan menggunakan konversi channel warna pada citra, dari RGB / BGR ke grayscale dan sebaliknya
+pada saat awal citra dibaca dengan 3 channel warna; Blue-Green-Red, kemudian kita akan mengubah data citra dari BGR ke Grayscale dengan rumus = (0.299 * Red) + (0.587 * Green) + (0.114 * Blue).
+Formula ini menghitung nilai keabuan berdasarkan proporsi yang berbeda untuk masing-masing saluran warna RGB. Nilai tersebut kemudian digunakan sebagai tingkat keabuan piksel dalam citra grayscale.
+
+
+- Bilateral Filter
+Bilateral filter adalah metode pengolahan citra yang digunakan untuk mengurangi noise atau menghaluskan citra dengan mempertahankan tepi atau detail penting. Filter ini bekerja dengan mempertimbangkan kedua jarak spasial dan perbedaan intensitas piksel. <br> <br>
+Dalam bilateral filter, setiap piksel dalam citra diproses dengan mempertimbangkan dua faktor utama: jarak spasial antara piksel-piksel dan perbedaan intensitas warna antara piksel yang sedang diproses dengan piksel-piksel tetangganya. <br> <br>
+Secara sederhana, piksel tetangga yang memiliki perbedaan warna yang signifikan dengan piksel yang sedang diproses akan memberikan kontribusi yang lebih kecil dalam proses penghalusan. Hal ini membantu mempertahankan tepi atau detail penting dalam citra, karena perbedaan intensitas yang signifikan dianggap sebagai tanda adanya tepi. <br>
+
+
+- Deteksi Tepi menggunakan Operator Canny
+Deteksi tepi dalam pengolahan citra adalah proses identifikasi dan penyorotan perubahan tajam dalam intensitas piksel di sekitar suatu objek atau struktur dalam citra. Tepi adalah perbatasan atau transisi antara dua wilayah dengan intensitas yang berbeda dalam citra. <br> <br>
+Deteksi tepi penting dalam analisis citra karena tepi sering kali mengandung informasi penting tentang struktur objek, kontur, atau batas. Tepi dapat digunakan untuk segmentasi objek, pemrosesan lanjutan, ekstraksi fitur, dan tugas pengenalan pola lainnya. <br> <br>
+Metode deteksi tepi umumnya melibatkan penerapan operator gradien, seperti Sobel, Prewitt, atau Roberts, yang mengukur perubahan intensitas spasial dalam citra. Operator ini memberikan informasi tentang arah dan kekuatan perubahan intensitas di setiap piksel. <br> <br>
+Setelah menghitung gradien, langkah-langkah tambahan seperti non-maximum suppression, ambang batas, atau penghubungan tepi dapat diterapkan untuk meningkatkan akurasi dan kejelasan tepi yang dihasilkan. <br> <br>
+Deteksi tepi membantu dalam pengolahan dan analisis citra dengan mengidentifikasi dan menyoroti informasi yang penting secara visual dalam citra. Ini merupakan langkah awal yang umum dalam banyak aplikasi pengolahan citra yang lebih lanjut dan dapat digunakan dalam berbagai bidang seperti visi komputer, pengenalan pola, dan penglihatan mesin. <br> <br>
+Operator Canny adalah salah satu teknik deteksi tepi yang populer dalam pengolahan citra. Metode ini dikembangkan oleh John F. Canny pada tahun 1986 dan dianggap sebagai salah satu pendekatan terbaik untuk deteksi tepi. <br> <br>
+Operator Canny menghasilkan tepi yang tajam, mempertahankan tepi penting, dan mengurangi kesalahan deteksi tepi. Metode ini sering digunakan dalam berbagai aplikasi pengolahan citra, seperti deteksi objek, segmentasi citra, analisis kontur, dan pengenalan pola. <br> 
+
+
+- Kontur pada Citra 
+Kontur adalah garis atau kurva yang menggambarkan perbatasan atau tepi antara objek dan latar belakang dalam sebuah gambar atau citra. Kontur menunjukkan perubahan tajam dalam intensitas piksel, yang bisa menjadi indikator adanya perubahan objek atau struktur dalam citra. Kontur merupakan representasi visual dari bentuk dan struktur dalam citra dan dapat digunakan untuk berbagai tujuan seperti deteksi objek, segmentasi, pengenalan pola, dan analisis bentuk.
+
+
+- Mask Layer
+Mask layer dalam pengolahan citra adalah lapisan tambahan yang digunakan untuk membatasi efek atau operasi tertentu hanya pada area tertentu dalam citra. Mask layer, juga dikenal sebagai lapisan mask atau lapisan seleksi, berfungsi sebagai penanda atau pemilih yang mengontrol di mana manipulasi atau efek akan diterapkan dalam citra. <br> <br>
+Biasanya, mask layer adalah citra biner dengan dua nilai piksel yang berbeda: 0 dan 255. Nilai 255 (putih) menandakan area yang dipilih, sementara nilai 0 (hitam) menandakan area yang tidak dipilih. Mask layer ini diterapkan pada citra asli atau lapisan gambar lainnya dalam proses kompositing atau pengeditan citra.<br> <br>
+Dengan menggunakan mask layer, Anda dapat mengaplikasikan efek tertentu, seperti pengaburan, pencahayaan, atau perubahan warna, hanya pada area yang dipilih sesuai dengan pola mask layer. Ini memberikan fleksibilitas dan kontrol yang lebih besar dalam pengolahan citra, karena Anda dapat menargetkan dan membatasi manipulasi hanya pada area yang diinginkan, sambil mempertahankan detail atau bagian lain dalam citra yang tidak terpengaruh. <br> <br>
+Mask layer dapat digunakan dalam berbagai aplikasi pengolahan citra, termasuk kompositing, retouching, segmentasi, dan efek khusus. Dengan memanfaatkan mask layer, Anda dapat menciptakan efek yang kompleks dan mengatur pengaruh visual secara selektif dalam citra.
+
+
+- Citra Biner
+Citra biner adalah jenis citra yang hanya memiliki dua nilai piksel yang mungkin, yaitu hitam dan putih. Dalam citra biner, setiap piksel diwakili oleh satu bit informasi, di mana nilai 0 menandakan piksel hitam dan nilai 1 menandakan piksel putih. <br> <br>
+Citra biner sering digunakan untuk merepresentasikan gambar dalam bentuk yang lebih sederhana dan efisien. Dalam citra biner, perbedaan intensitas warna tidak dihiraukan, hanya ada perbedaan antara piksel yang dianggap objek (putih) dan piksel yang dianggap latar belakang (hitam). Ini membuat citra biner berguna dalam berbagai aplikasi, termasuk pengenalan pola, pemrosesan lanjutan, segmentasi, dan analisis struktur. <br> <br>
+Proses mengubah citra ke dalam bentuk biner melibatkan penerapan thresholding, yaitu menentukan ambang batas yang membagi piksel menjadi hitam dan putih berdasarkan intensitas warnanya. Piksel dengan intensitas di atas ambang batas diubah menjadi putih, sementara piksel dengan intensitas di bawah ambang batas diubah menjadi hitam.<br> <br>
+Dengan mempertahankan informasi objek dan latar belakang secara sederhana, citra biner memungkinkan pengolahan dan analisis citra yang lebih mudah dan efisien dalam beberapa konteks aplikasi.<br> <br>
+
+## Penjelasan program
 
 1. importing library yang di butuhkan
 2. Baca image ke dalam kode menggunakan ```cv2.imwrite``` dan simpan dalam sebuah variabel
